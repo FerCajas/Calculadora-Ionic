@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <p style="text-align: center;">CALCULADORA</p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <strong><ion-input disabled [(ngModel)]="operacion"></ion-input></strong>
+      </ion-col>
+    </ion-row>
+    <hr>
+    <ion-row>
+      <ion-col><ion-button size="small" expand="full" color="medium" (click)='condition("%")'>%</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="medium">CE</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="medium" (click)='clear()'>C</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="danger" (click)='eliminarUltimo()'>---</ion-button></ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button size="small" expand="full" color="medium" (click)='divicionParados()'>1/x</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="medium" (click)='cuadradonumero()'>x2</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="medium" (click)='raizCuadrada()'>√ </ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="medium" (click)='condition("/")'><b>/</b></ion-button></ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button size="small" expand="full" color="light" (click)='entervalueNumeros("7")'>7</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="light" (click)='entervalueNumeros("8")'>8</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="light" (click)='entervalueNumeros("9")'>9</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="medium" (click)='condition("*")'><b>*</b></ion-button></ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button size="small" expand="full" color="light" (click)='entervalueNumeros("4")'>4</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="light" (click)='entervalueNumeros("5")'>5</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="light" (click)='entervalueNumeros("6")'>6</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="medium" (click)='condition("-")'><b>-</b></ion-button></ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button size="small" expand="full" color="light" (click)='entervalueNumeros("1")'>1</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="light" (click)='entervalueNumeros("2")'>2</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="light" (click)='entervalueNumeros("3")'>3</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="medium" (click)='condition("+")'><b>+</b></ion-button></ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button size="small" expand="full" color="medium">+/-</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="light" (click)='entervalueNumeros("0")' >0</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="light" (click)='entervalueNumeros(".")'>,</ion-button></ion-col>
+      <ion-col><ion-button size="small" expand="full" color="success" (click)='resultOperaciones()'>=</ion-button></ion-col>
+
+    </ion-row>
+ </ion-grid>
+</ion-content>
